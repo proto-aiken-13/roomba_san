@@ -17,6 +17,17 @@
       </list>
     </option>
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_directory_selection": "C:/Users/Migue/OneDrive/Desktop/Projects/CS2103T/roomba_san/roomba_san/src/main/java/roomba/bot"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="roomba.bot" />
+      <recent name="bot" />
+    </key>
+  </component>
   <component name="TaskManager">
     <servers />
   </component>

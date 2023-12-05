@@ -27,6 +27,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 |----------|----------|-------------------------------------|---------------------------------------------------------|
 | `* * `  | student | add modules/subjects          | have a module in which I can add topics to keep track of.  |
 | `* * * `  | student | add and store trivia         | have questions or concepts that I can remember  |
+| `* * * `  | student | delete trivia         | remove modules or questions I no longer need  |
 | `* * `  | student | keep brief notes about topics |                                                  |
 | `* * `  | student | have a proficiency tracker         | Keep a track of my learning progress.  |
 
@@ -34,6 +35,34 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 --------------------------------------------------------------------------------------------------------------------
 ### **Design decisions and considerations**
 
+**Commands**
+
+* Adding Trivia `/add q/<question> a/<answer>`
+
+* Delete Trivia `/remove q/<question>`
+
+* Show Trivia `/show`
+ 
+**Model**
+
+* Trivia - Trivia.java
+
+A Trivia class' role is to represent a Trivia. A Trivia comprises of two things:
+
+1) Question
+2) Answer
+
+Current design suggestions:
+
+- Question and Answers stored as strings within the Trivia class.
+
+Pros:
+- Less code and easier to track.
+
+Cons:
+- Not as extendible. Furthermore, for future updates it'll potentially be nice to add metrics to the Question and Answer
+
+* UI - Ui.java
 
 --------------------------------------------------------------------------------------------------------------------
 ### **Use cases**
