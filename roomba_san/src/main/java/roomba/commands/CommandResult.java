@@ -37,11 +37,7 @@ public class CommandResult {
     public boolean isShowHelp() {
         return showHelp;
     }
-
-    public boolean isExit() {
-        return exit;
-    }
-
+    
     @Override
     public boolean equals(Object other) {
         if (other == this) {
