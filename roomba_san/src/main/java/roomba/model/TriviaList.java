@@ -17,10 +17,7 @@ public class TriviaList {
      * @param trivia The trivia to be added.
      * @throws TriviaListException Error message if the Trivia is already in the list.
      */
-    public void addTrivia(Trivia trivia) throws TriviaListException {
-        if (triviaItems.contains(trivia)) {
-            throw new TriviaListException("You already have this trivia...");
-        }
+    public void addTrivia(Trivia trivia) {
         triviaItems.add(trivia);
     }
 
@@ -30,19 +27,15 @@ public class TriviaList {
      * @return The removed trivia.
      * @throws TriviaListException Error message if no such trivia exists in the triviaList.
      */
-    public Trivia removeTrivia(Trivia trivia) throws TriviaListException {
-        if (triviaItems.contains(trivia)) {
-            Trivia triviaReturn = null;
-            for (Trivia obj : triviaItems) {
-                if (obj.equals(trivia)) {
-                    triviaReturn = obj;
-                    triviaItems.remove(obj);
-                }
+    public Trivia removeTrivia(Trivia trivia) {
+        Trivia triviaReturn = null;
+        for (Trivia obj : triviaItems) {
+            if (obj.equals(trivia)) {
+                triviaReturn = obj;
+                triviaItems.remove(obj);
             }
-            return triviaReturn;
-        } else {
-            throw new TriviaListException("Trivia not found");
         }
+        return triviaReturn;
     }
 
     /**
@@ -51,18 +44,14 @@ public class TriviaList {
      * @return The requested Trivia.
      * @throws TriviaListException Error message if no such trivia exists in the triviaList.
      */
-    public Trivia getTrivia(Trivia trivia) throws TriviaListException {
-        if (triviaItems.contains(trivia)) {
-            Trivia triviaReturn = null;
-            for (Trivia obj : triviaItems) {
-                if (obj.equals(trivia)) {
-                    triviaReturn = obj;
-                }
+    public Trivia getTrivia(Trivia trivia) {
+        Trivia triviaReturn = null;
+        for (Trivia obj : triviaItems) {
+            if (obj.equals(trivia)) {
+                triviaReturn = obj;
             }
-            return triviaReturn;
-        } else {
-            throw new TriviaListException("Trivia not found");
         }
+        return triviaReturn;
     }
 
     /**
@@ -77,5 +66,14 @@ public class TriviaList {
         }
     
         return returnList;
+    }
+
+    /**
+     * Checks if a particular trivia is within the trivia list.
+     * @param trivia The trivia to be checked.
+     * @return If the trivia is in the list.
+     */
+    public boolean isInTrivia(Trivia trivia) {
+        return triviaItems.contains(trivia);
     }
 }

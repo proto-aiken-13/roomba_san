@@ -1,4 +1,4 @@
-package roomba.parser.exceptions;
+package roomba.logic.parser.exceptions;
 
 
 import roomba.commons.exceptions.IllegalValueException;

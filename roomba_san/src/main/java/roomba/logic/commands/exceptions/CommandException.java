@@ -1,4 +1,4 @@
-package roomba.commands.exceptions;
+package roomba.logic.commands.exceptions;
 
 /**
  * Represents an error which occurs during execution of a command.

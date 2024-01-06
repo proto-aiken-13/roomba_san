@@ -5,13 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="175c1d39-9a74-412a-851e-c3f92c2fa312" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/roomba/commons/exceptions/IllegalValueException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/roomba/parser/Parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/roomba/parser/exceptions/ParseException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/roomba/logic/LogicManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/roomba/logic/commands/AddTriviaCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/roomba/logic/parser/AddTriviaParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/roomba/logic/parser/ArgumentList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/roomba/logic/parser/ArgumentParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/roomba/logic/parser/Commands.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/roomba/logic/parser/ParserUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/roomba/logic/parser/Prefix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/roomba/logic/parser/RoombaParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/roomba/model/Model.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/roomba/model/Roomba.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/roomba/logic/parser/CommandParserTestUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/roomba/Ui/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/roomba/Ui/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/roomba/bot/Roomba.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/roomba/bot/RoombaBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/roomba/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/roomba/logic/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/roomba/commands/CommandResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/roomba/logic/commands/CommandResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/roomba/commands/exceptions/CommandException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/roomba/logic/commands/exceptions/CommandException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/roomba/model/TriviaList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/roomba/model/TriviaList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/roomba/parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/roomba/logic/parser/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/roomba/parser/exceptions/ParseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/roomba/logic/parser/exceptions/ParseException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +37,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -28,9 +45,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2Z9vZL02QVvJlB7YLNWl0RK6Z0E" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,8 +60,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "branch-parser",
-    "last_directory_selection": "C:/Users/Migue/OneDrive/Desktop/Projects/CS2103T/roomba_san/roomba_san/src/main/java/roomba/bot"
+    "git-widget-placeholder": "branch-add-trivia",
+    "last_directory_selection": "C:/Users/Migue/OneDrive/Desktop/Projects/CS2103T/roomba_san/roomba_san/src/main/java/roomba/bot",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -63,5 +83,16 @@
       <updated>1701847165554</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/roomba/logic/parser/ArgumentParser.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

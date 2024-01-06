@@ -1,4 +1,4 @@
-package roomba.commands;
+package roomba.logic.commands;
 
 import static java.util.Objects.requireNonNull;
 
