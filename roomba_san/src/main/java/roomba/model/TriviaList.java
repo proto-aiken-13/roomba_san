@@ -35,6 +35,21 @@ public class TriviaList {
     }
 
     /**
+     * Returns a specific trivia.
+     * @param trivia The trivia to retrieve
+     * @return The trivia that matches the trivia given.
+     */
+    public Trivia getTrivia(Trivia trivia) {
+        Trivia triviaReturn = null;
+        for (Trivia obj : triviaItems) {
+            if (obj.equals(trivia)) {
+                triviaReturn = obj;
+            }
+        }
+        return triviaReturn;
+    }
+
+    /**
      * Shows the list of all Trivia.
      * @return The list of all Trivia.
      */
@@ -66,4 +81,10 @@ public class TriviaList {
 
         return false;
     }
+
+    public void editTrivia(Trivia trivia) {
+        this.removeTrivia(trivia);
+        triviaItems.add(trivia);
+    }
+        
 }

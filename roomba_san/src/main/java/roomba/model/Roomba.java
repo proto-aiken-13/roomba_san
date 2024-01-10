@@ -41,4 +41,9 @@ public class Roomba implements Model {
     public boolean isInTriviaList(Trivia singleTrivia) {
         return trivia.isInTrivia(singleTrivia);
     }
+
+    @Override
+    public void editTrivia(Trivia singleTrivia) {
+        trivia.editTrivia(singleTrivia);
+    }
 }

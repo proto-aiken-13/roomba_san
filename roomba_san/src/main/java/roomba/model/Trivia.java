@@ -30,10 +30,12 @@ public class Trivia {
      * Adds an answer to a question, provided that the question has yet to be answered.
      * @param answer The answer to a question.
      */
-    public void addAnswer(String answer) {
-        if (answer == null) {
-            this.answer = answer;
-        }
+    public void editAnswer(String answer) {
+        this.answer = answer;
+    }
+
+    public String getAnswer() {
+        return this.answer;
     }
 
     /**

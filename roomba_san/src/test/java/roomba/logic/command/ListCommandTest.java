@@ -68,5 +68,9 @@ public class ListCommandTest {
         public boolean isInTriviaList(Trivia trivia) {
             return false;
         }
+
+        @Override
+        public void editTrivia(Trivia trivia) {
+        }
     }
 }

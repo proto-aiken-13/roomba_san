@@ -84,5 +84,9 @@ public class AddTriviaCommandTest {
         public boolean isInTriviaList(Trivia trivia) {
             return triviaList.isInTrivia(trivia);
         }
+
+        @Override
+        public void editTrivia(Trivia trivia) {
+        }
     }
 }

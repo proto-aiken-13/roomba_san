@@ -4,6 +4,9 @@ import roomba.logic.commands.exceptions.CommandException;
 import roomba.model.Model;
 import roomba.model.Trivia;
 
+/**
+ * Adds a Trvia to RoombaBot given the specified Question and Answer.
+ */
 public class AddTriviaCommand extends Command {
     private final Trivia triviaToAdd;
 
@@ -11,9 +14,9 @@ public class AddTriviaCommand extends Command {
 
     public static final String MESSAGE_USAGE = "!addTrivia <QUESTION> a/<ANSWER>";
 
-    public static final String DUPLICATE_MESSAGE = "uhh, it's already in the list";
+    public static final String DUPLICATE_MESSAGE = "uhh, i already know that. unless you want me ";
 
-    public static final String SUCCESS_MESSAGE = "Woahh, didnt know that!";
+    public static final String SUCCESS_MESSAGE = "yipee very cool fact!!!";
 
     /**
      * Constructs an instance of AddTriviaCommand
