@@ -1,7 +1,5 @@
 package roomba.model;
 
-import roomba.model.exceptions.TriviaListException;
-
 import java.util.List;
 
 public class Roomba implements Model {

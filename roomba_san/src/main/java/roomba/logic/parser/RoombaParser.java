@@ -2,7 +2,9 @@ package roomba.logic.parser;
 
 import roomba.logic.commands.AddTriviaCommand;
 import roomba.logic.commands.Command;
+import roomba.logic.commands.ListCommand;
 import roomba.logic.parser.exceptions.ParseException;
+import roomba.model.TriviaList;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -55,6 +57,8 @@ public class RoombaParser {
         switch (commandWord) {
         case AddTriviaCommand.COMMAND_WORD:
             return new AddTriviaParser().parse(arguments);
+        case ListCommand.COMMAND_WORD:
+            return new ListCommand();
         default:
             throw new ParseException(MESSAGE_UNKNOWN_COMMAND);
         }

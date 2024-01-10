@@ -13,7 +13,7 @@ public class AddTriviaCommand extends Command {
 
     public static final String DUPLICATE_MESSAGE = "uhh, it's already in the list";
 
-    public static final String SUCCESS_MESSAGE = "woahh, didnt know that!";
+    public static final String SUCCESS_MESSAGE = "Woahh, didnt know that!";
 
     /**
      * Constructs an instance of AddTriviaCommand
@@ -37,7 +37,9 @@ public class AddTriviaCommand extends Command {
         }
 
         model.addTrivia(triviaToAdd);
-        return new CommandResult(String.format(SUCCESS_MESSAGE));
+        String triviaInfo = triviaToAdd.toString();
+        return new CommandResult(String.format(SUCCESS_MESSAGE) + "\n" +
+                triviaInfo);
     }
 
     /**
