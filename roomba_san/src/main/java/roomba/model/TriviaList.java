@@ -1,7 +1,5 @@
 package roomba.model;
 
-import roomba.model.exceptions.TriviaListException;
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -15,7 +13,6 @@ public class TriviaList {
     /**
      * Adds trivia to the trivialist.
      * @param trivia The trivia to be added.
-     * @throws TriviaListException Error message if the Trivia is already in the list.
      */
     public void addTrivia(Trivia trivia) {
         triviaItems.add(trivia);
@@ -25,7 +22,6 @@ public class TriviaList {
      * Removes trivia from the triviaList.
      * @param trivia The Trivia to be removed.
      * @return The removed trivia.
-     * @throws TriviaListException Error message if no such trivia exists in the triviaList.
      */
     public Trivia removeTrivia(Trivia trivia) {
         Trivia triviaReturn = null;
@@ -39,32 +35,16 @@ public class TriviaList {
     }
 
     /**
-     * Retrieves trivia from the triviaList.
-     * @param trivia The Trivia to be retrieved
-     * @return The requested Trivia.
-     * @throws TriviaListException Error message if no such trivia exists in the triviaList.
-     */
-    public Trivia getTrivia(Trivia trivia) {
-        Trivia triviaReturn = null;
-        for (Trivia obj : triviaItems) {
-            if (obj.equals(trivia)) {
-                triviaReturn = obj;
-            }
-        }
-        return triviaReturn;
-    }
-
-    /**
      * Shows the list of all Trivia.
      * @return The list of all Trivia.
      */
     public List<String> getAllTrivia() {
         List<String> returnList = new ArrayList<>();
-    
+
         for (Trivia trivia : triviaItems) {
             returnList.add(trivia.toString());
         }
-    
+
         return returnList;
     }
 
@@ -74,6 +54,16 @@ public class TriviaList {
      * @return If the trivia is in the list.
      */
     public boolean isInTrivia(Trivia trivia) {
-        return triviaItems.contains(trivia);
+        if (triviaItems.contains(trivia)) {
+            return true;
+        }
+
+        for (Trivia obj : triviaItems) {
+            if (obj.equals(trivia)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

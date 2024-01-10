@@ -67,6 +67,6 @@ public class Trivia {
     @Override
     public String toString() {
         return this.question + "\n"
-            + this.answer == null ? "-" : this.answer;
+            + "- " +(this.answer == null ? "" : this.answer);
     }
 }
